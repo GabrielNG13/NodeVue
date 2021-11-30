@@ -19,6 +19,18 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
+    <v-card>
+      <v-toolbar>
+        <div>Item 1</div>
+        <v-spacer></v-spacer>
+        <div>Item 2</div>
+        <v-spacer></v-spacer>
+        <div>Item 3</div>
+        <v-spacer></v-spacer>
+        <div>Item 4</div>
+      </v-toolbar>
+    </v-card>
+
     <v-navigation-drawer
         permanent
         expand-on-hover
@@ -41,6 +53,26 @@
         </v-list>
 
         <v-divider></v-divider>
+
+        <v-list>
+          <v-list-item link>
+            <v-list-item-content>
+              <v-list-item-title class="text-h6">
+                <strong>Item 1</strong>
+              </v-list-item-title>
+              <v-list-item-title class="text-h6">
+                <strong>Item 2</strong>
+              </v-list-item-title>
+              <v-list-item-title class="text-h6">
+                <strong>Item 3</strong>
+              </v-list-item-title>
+              <v-list-item-title class="text-h6">
+                <strong>Item 4</strong>
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+
       </v-navigation-drawer>
 
       <v-content
