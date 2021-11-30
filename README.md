@@ -23,4 +23,4 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-![alt](./Imagens/AF1.png)
+![alt](https://github.com/GabrielNG13/NodeVue/blob/master/Imagens/AF1.PNG)
