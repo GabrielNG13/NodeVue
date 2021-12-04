@@ -28,3 +28,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ###AF2
 ![alt](https://github.com/GabrielNG13/NodeVue/blob/master/Imagens/AF2.PNG)
+
+###AF3
+![alt](https://github.com/GabrielNG13/NodeVue/blob/master/Imagens/AF3.PNG)
