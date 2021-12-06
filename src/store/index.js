@@ -65,20 +65,20 @@ export default new Vuex.Store({
             },
         ],
         title: "Lugares para visitar em São Roque",
-        events: null,
-        titleEvents: "Events",
+        data: null,
+        titleEvents: "Companys",
     },
     mutations: {
-        SET_EVENTS(state, payload){
-            state.events = payload
+        SET_DATA(state, payload){
+            state.data = payload
         }
     },
     actions: {
-        fetchEvents({commit}){
-            axios.get("https://agenda-balaguer.herokuapp.com/api/event")
+        fetchData({commit}){
+            axios.get("https://jsonplaceholder.typicode.com/users")
             .then(res=>{
-                const payload = res.data.values
-                commit('SET_EVENTS', payload)
+                const payload = res.data
+                commit('SET_DATA', payload)
             })
         }
     },

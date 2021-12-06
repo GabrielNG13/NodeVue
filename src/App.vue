@@ -2,9 +2,9 @@
   <v-app>
     <SystemBar></SystemBar>
 
-    <AppBar></AppBar>
+    <AppBar :data="data"></AppBar>
 
-    <Toolbar :data="events"></Toolbar>
+    <Toolbar :data="data"></Toolbar>
 
     <!-- -->
     <v-main>
@@ -18,20 +18,18 @@
     </v-main>
 
     <v-footer>
-      <v-content
-        class="#F0F0F0 text-center"
+      <v-main
+        class="text-center"
       >
-        <strong>v-footer</strong>
-      </v-content>
+        <v-btn @click="$vuetify.goTo(0,0)">Click to back to top</v-btn> 
+      </v-main>
     </v-footer>
 
-    <v-button-navigation>
-      <v-content
-        class="#F0F0F0 text-center"
-      >
-        <strong>v-button-navigation</strong>
-      </v-content>
-    </v-button-navigation>
+    <v-main
+      class="text-center"
+    >
+      <strong>2021</strong>
+    </v-main>
   </v-app>
 </template>
 
@@ -45,8 +43,8 @@
     name: 'App',
 
     computed: {
-      events(){
-        return this.$store.state.events
+      data(){
+        return this.$store.state.data
       }
     },
     components: {
@@ -58,12 +56,8 @@
       itens(){
       }
     },
-
-    data: () => ({
-      //
-    }),
     created(){
-      this.$store.dispatch("fetchEvents")
+      this.$store.dispatch("fetchData")
     }
 };
 </script>

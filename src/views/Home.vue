@@ -1,8 +1,6 @@
 <template>
     <v-app>
-        <Drawer :data="events"></Drawer>
-
-        <!--
+        <!--<Drawer :data="data"></Drawer>
         <h1>{{titleView}}</h1>
         <v-row>
             <v-col
@@ -23,7 +21,7 @@
         <h1>{{title}}</h1>
         <v-row>
             <v-col
-            v-for="n in events"
+            v-for="n in data"
             :key="n"
             cols="12"
             xs="6"
@@ -35,47 +33,36 @@
                 <CardsFetch :card="n"></CardsFetch>
             </v-col>
         </v-row>
-
-        <v-content
-        class="#F0F0F0 text-center"
-        >
-            <strong>2021</strong>
-        </v-content>
     </v-app>
 </template>
 
 <script>
     //import Cards from "@/components/Cards"
     import CardsFetch from "@/components/CardsFetch"
-    import Drawer from "@/components/Drawer"
+    //import Drawer from "@/components/Drawer"
 
     export default {
         name: "Home",
-        data(){
-            return{
-                titleView: this.$store.state.bigTitle,
-            }
-        },
         computed:{
             myCards(){
                 return this.$store.state.cards
             },
-            events(){
-                return this.$store.state.events
+            data(){
+                return this.$store.state.data
             },
             title(){
                 return this.$store.getters.bigTitle
             },
         },
         components: {
-            //Cards,
+            //c,
             CardsFetch,
-            Drawer
+            //Drawer
         },
         methods: {
         },
         created(){
-            this.$store.dispatch("fetchEvents")
+            this.$store.dispatch("fetchData")
         }
     }
 </script>

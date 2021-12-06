@@ -1,10 +1,10 @@
 
 <template>
   <v-system-bar>
-    <v-content
+    <v-main
       class="text-center"
     >
-      <strong>System Bar</strong>
-    </v-content>
+      <strong></strong>
+    </v-main>
   </v-system-bar>
 </template>

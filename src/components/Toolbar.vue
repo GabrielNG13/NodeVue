@@ -4,10 +4,10 @@
 
     <v-row>
       <v-col
-      v-for="n in (0,4)"
+      v-for="n in data"
       :key="n"
       >
-        <v-list-item @click="() => {}">Event {{n}}</v-list-item>
+        <v-list-item @click="() => {}">{{n.name}}</v-list-item>
       </v-col>
     </v-row>
 
